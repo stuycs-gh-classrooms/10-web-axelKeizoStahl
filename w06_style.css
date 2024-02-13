@@ -1,0 +1,29 @@
+html {
+    font-family: "Times";
+}
+
+body {
+    color: white;
+}
+
+h1 {
+    font-weight: 800;
+}
+
+a {
+    font-size: 60px;
+}
+    
+ul {
+    background-color: black;
+}
+
+li {
+    border: 3px dotted gray;
+    text-align: center;
+}
+
+img {
+    height: 50px;
+    width: 200px;
+}
