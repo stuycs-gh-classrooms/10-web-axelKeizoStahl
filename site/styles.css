@@ -1,8 +1,37 @@
-.center {
-    margin: auto;
+body {
+    min-height: 100vh;
+    background-color: grey;
     width: 500px;
-    box-shadow: 0px 0px 2px 2px black;
-    padding: 20px;
-    background: gray;
-    text-align: center;
+    margin: auto;
+    margin-top: 50px;
 }
+
+.center {
+    background-color: blue;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.currsite {
+    background-color: blue;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    a {
+        padding: 10px;
+        background-color: skyblue;
+        display: block;
+        max-width: 10ch;
+        border-radius: 10px;
+        }
+}
+a {
+    text-decoration: none;
+}
+    a:hover {
+        background-color: yellow;
+    }
