@@ -1,6 +1,9 @@
 body {
     min-height: 100vh;
-    background-color: grey;
+    background-image: url("./images/tetrisback.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 500px;
     margin: auto;
     margin-top: 50px;
@@ -27,11 +30,17 @@ nav {
         display: block;
         max-width: 10ch;
         border-radius: 10px;
-        }
+    }
 }
+
 a {
     text-decoration: none;
 }
-    a:hover {
-        background-color: yellow;
-    }
+
+a:hover {
+    background-color: yellow;
+}
+
+img {
+    width: 400px;
+}
