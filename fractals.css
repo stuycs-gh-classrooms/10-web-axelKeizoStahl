@@ -1,0 +1,70 @@
+/* Body and general text styling */
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 500px;
+    margin: auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+/* Links */
+a {
+    color: #4e9af1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #63b8ff;
+    text-decoration: underline;
+}
+
+/* Images */
+img {
+    filter: brightness(0.8); /* Adjust brightness for images */
+    max-width: 100%;
+    height: auto;
+}
+
+/* Code blocks */
+pre {
+    background-color: #333;
+    color: #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+code {
+    color: #ccc;
+}
+
+/* Containers */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Optional: Adjust specific element styles */
+/* Example */
+.tree-variant-description p {
+    color: #bdbdbd; /* Change color for specific paragraph */
+}
+

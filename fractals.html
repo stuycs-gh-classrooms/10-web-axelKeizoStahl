@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fractals - Axel Stahl</title>
+        <link href="./fractals.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Fractals and their variants -- Axel Stahl</h1>
+        <h2>Tree Fractal</h2>
+        <h3>Original</h3>
+        <img src="./images/tree.png" alt="koch fractal" />
+        <h3>Tree Variant</h3>
+        <img src="./images/tree-var.png" alt="koch-var fractal" />
+        <p>This is the variant of the tree fractal. This fractal creates a look of a snowflake. It uses random thickness in lines to look more natural. It also spreads out at creates these trees all around it to mimic a snowflake.<p/>
+        <pre> <code> 
+            def tree_var(t, depth, length, angle):
+                n = 0
+                while n < depth+1:
+                    t.pensize(random.randint(2, 3))
+                    tree(t, depth, length, angle)
+                    t.lt(360/(depth+1))
+                    n += 1
+                if length >= 5:
+                    t.lt(360/depth)
+                    tree_var(t, depth, length/2, angle)
+        </code> </pre>
+        <h2>Koch Curve Fractal</h2>
+        <h3>Original</h3>
+        <img src="./images/koch.png" alt="koch fractal" />
+        <h3>Koch Curve Variant</h3>
+        <img src="./images/koch-var.png" alt="koch-var fractal" />
+        <p>This one is supposed to be a rigid fractal, but unravelled. This fractal uses random turns and random pensizes to look naturally disorderly.</p>
+        <pre> <code> 
+            def koch_var(t, depth, size):
+                choice = random.randint(0, 4)
+                if choice == 1:
+                    t.lt(5)
+                    t.pensize(depth+choice)
+                if depth <= 1:
+                    choice = random.randrange(0, 360)
+                    t.rt(choice)
+                    t.fd(size)
+                else:
+                    koch_var(t, depth - 1, size)
+                    t.lt(60)
+                    koch_var(t, depth - 1, size)
+                    t.lt(-120)
+                    koch_var(t, depth - 1, size)
+                    t.lt(60)
+                    koch_var(t, depth - 1, size)
+        </code> </pre>
+        <h2>Sierpinski Fractal</h2>
+        <h3>Original</h3>
+        <img src="./images/sierpinski.png" alt="sierpinski.png" />
+        <h3>Sierpinski Variant</h3>
+        <img src="./images/sierpinski-var.png" alt="sierpinski-var.png" />
+        <p>This variant of sierpinski looks random but isnt really. The only random part about it is that the colors change each time. Each time the function is called, the turtle turns around.</p>
+        <pre> <code> 
+            def draw_sierpinski_var(t, depth, length):
+                choice = random.randint(0, 4)
+                t.pencolor(random.randint(0, 225), random.randint(0, 225), random.randint(0, 225))
+                t.lt(180)
+                if depth==0:
+                    for i in range(0,3):
+                        t.fd(length)
+                        t.left(120)
+                else:
+                    draw_sierpinski_var(t,depth-1,length/2)
+                    t.fd(length/2)
+                    draw_sierpinski_var(t,depth-1,length/2)
+                    t.bk(length/2)
+                    t.left(60)
+                    t.fd(length/2)
+                    t.right(60)
+                    draw_sierpinski_var(t,depth-1,length/2)
+                    t.left(60)
+                    t.bk(length/2)
+                    t.right(60)
+        </code> </pre>
+    </body>
+</html>
+
